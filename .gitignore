@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache
+.ruff_cache
+*env/
+dist/
+build/
+*.egg-info/
+TODO/
+test_*/
+*.db
+certs/ca/*.key
+certs/ca/*.srl
+src/simserver/certs/
+.dev/tools/*.class
+.dev/tools/*.enc
+.dev/tools/*.json
+logs/

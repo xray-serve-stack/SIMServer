@@ -1,0 +1,39 @@
+{
+    "typeCheckingMode": "strict",
+    "useLibraryCodeForTypes": true,
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false,
+    "reportUnusedImport": "none",
+    "reportUnusedVariable": "error",
+    "reportPrivateUsage": "error",
+    "reportUnknownVariableType": "error",
+    "reportUnknownMemberType": "error",
+    "reportUnknownArgumentType": "error",
+    "reportUnknownParameterType": "error",
+    "reportMissingParameterType": "error",
+    "include": [
+        "src/simserver"
+    ],
+    "exclude": [
+        "**/__pycache__",
+        "**/.venv",
+        "**/node_modules",
+        "**/.*",
+    ],
+    "executionEnvironments": [
+        {
+            "root": "src/simserver/message_definitions",
+            "reportUnknownMemberType": "none",
+            "reportUnknownVariableType": "none"
+        },
+        {
+            "root": "tests",
+            "reportUnknownParameterType": "none",
+            "reportMissingParameterType": "none",
+            "reportUnknownVariableType": "none",
+            "reportUnknownMemberType": "none",
+            "reportUnknownArgumentType": "none",
+            "reportPrivateUsage": "none"
+        },
+    ]
+}

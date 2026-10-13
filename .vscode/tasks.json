@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+
+  "tasks": [
+    {
+      "label": "Verify: Project",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 verify",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+
+    {
+      "label": "Verify: Pyright",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 verify-pyright",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Verify: Ruff",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 verify-ruff",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Test: Pytest",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 test",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Fix: Python",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 fix",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Format: Python",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 format",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Environment: Check",
+      "type": "shell",
+      "command": ".\\.dev\\tool.ps1 env",
+      "problemMatcher": []
+    }
+  ]
+}

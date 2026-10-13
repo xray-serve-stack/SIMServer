@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // Python
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+
+    // Diagnostics
+    "usernamehw.errorlens",
+
+    // Git
+    "eamodio.gitlens",
+
+    // Powershell
+    "ms-vscode.powershell",
+
+    // Comment highlighting
+    "aaron-bond.better-comments",
+
+    // TOML support
+    "tamasfe.even-better-toml",
+
+    // File path completion
+    "christian-kohler.path-intellisense"
+  ]
+}

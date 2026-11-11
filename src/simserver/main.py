@@ -12,10 +12,9 @@ LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 log_file = LOG_DIR / "app.log"
 
-
-# CERTS_DIR = BASE_DIR / "certs"
-# SERVER_CERT = CERTS_DIR / "server.crt"
-# SERVER_KEY = CERTS_DIR / "server.key"
+CERTS_DIR = BASE_DIR / "certs"
+SERVER_CERT = CERTS_DIR / "server.crt"
+SERVER_KEY = CERTS_DIR / "server.key"
 
 
 def main() -> None:
@@ -25,6 +24,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument(
+        "--https",
+        action="store_true",
+        help="Enable HTTPS using server certificates",
+    )
     args = parser.parse_args()
 
     # APP
@@ -35,8 +39,8 @@ def main() -> None:
         server.app,
         host=args.host,
         port=args.port,
-        # ssl_certfile=str(SERVER_CERT),
-        # ssl_keyfile=str(SERVER_KEY),
+        ssl_certfile=str(SERVER_CERT) if args.https else None,
+        ssl_keyfile=str(SERVER_KEY) if args.https else None,
     )
 
 
